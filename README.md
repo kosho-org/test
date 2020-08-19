@@ -1,7 +1,7 @@
 # hls-46-plugin
 This is a plug-in for hls.js to compare speeds of IPv4 and IPv6 session and choose faster one. 
 
-#Usage
+# Usage
 Under the currnet implementation, you must prepare 2 URls for IPv4 and IPv6 (for example, https://ipv4.example.com/media00.ts, https://ipv6.example.com/media01.ts). Also the subdomians must be ipv4 and ipv6.
 
 
@@ -41,9 +41,9 @@ Under the currnet implementation, you must prepare 2 URls for IPv4 and IPv6 (for
 
 ```
 
-##Mode
+## Mode
 
-#Files
+# Files
 - Client
  - hls-46.js
   - main plug-in
@@ -59,7 +59,4 @@ Under the currnet implementation, you must prepare 2 URls for IPv4 and IPv6 (for
  - uid.php
   -
 
-
-
-#Sample
 
