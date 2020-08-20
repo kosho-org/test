@@ -64,12 +64,12 @@ Under the currnet implementation, you must prepare folllowing URls.
 
 ## for HTML and api
 - https://ipv4.example.com/
- - https://ipv4.example.com/ip.php (to get IPv4 address by plugin)
+  - https://ipv4.example.com/ip.php (to get IPv4 address by plugin)
 - https://ipv6.example.com/
- - https://ipv6.example.com/beacon.php (to send statistic by plugin)
- - https://ipv6.example.com/uid.php (to get user-id by plugin)
- - https://ipv6.example.com/sid.php (to get session-id by plugin)
- - https://ipv6.example.com/ip.php (to get IPv4 address by plugin)
+  - https://ipv6.example.com/beacon.php (to send statistic by plugin)
+  - https://ipv6.example.com/uid.php (to get user-id by plugin)
+  - https://ipv6.example.com/sid.php (to get session-id by plugin)
+  - https://ipv6.example.com/ip.php (to get IPv4 address by plugin)
 
 ## for media delivery (subdomians must be ipv4 and ipv6 to undestand by plugin)
 - https://ipv4.media.example.com/
