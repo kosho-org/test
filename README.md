@@ -36,7 +36,7 @@ A plug-in for hls.js to compares speeds of IPv4 and IPv6 session and chooses the
 # Usage
 
 ## Mode 0 (Simple speed comparision)
-http://ipv6.jpcdn.jp/hls-comp0.html
+Sample: http://ipv6.jpcdn.jp/hls-comp0.html
 
 ```
 <html>
@@ -73,7 +73,8 @@ You must use mixed m3u8. You can omit hls46init's 3rd and 4th pamrameters (mode 
     - http://ipv6.jpcdn.jp/hls-comp0-simple.html
 
 ## Mode 1 (Speed comparision)
-http://ipv6.jpcdn.jp/hls-comp1.html
+Sample: http://ipv6.jpcdn.jp/hls-comp1.html
+
 ```
 <html>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@0.14.1"></script>
@@ -104,13 +105,14 @@ http://ipv6.jpcdn.jp/hls-comp1.html
 You must use normal m3u8 and set 3rd and 4th pamrameters of hls46init. Simplificaiton is the same as mode 0.
 
 ## Mode 2 (initital check)
+Sample: http://ipv6.jpcdn.jp/hls-mcdn1.html
 
-http://ipv6.jpcdn.jp/hls-mcdn1.html
 The first parameter of hls46init is 2. Other things are the same as mode 1.
 
 ## Mode 3 (continous check)
 
-http://ipv6.jpcdn.jp/hls-mcdn2.html
+Sample: http://ipv6.jpcdn.jp/hls-mcdn2.html
+
 The first parameter of hls46init is 3. Other things are the same as mode 1.
 
 # Instalation
@@ -139,7 +141,7 @@ Media files need the following preparations
   - cd <ts file directory>
   - perl ts-size-out.pl  > sunrise-2-filesize.js
 
-#Internal
+# Internal
 
 This plugin consists of the following functinos:
 
@@ -152,11 +154,11 @@ This plugin consists of the following functinos:
 - speedHandler
   - calculates session speeds. It's called by urlHandler and ontimeupdate of html5 video.
 
-#Note
+# Note
 
 ## mode 0 (simple speed comparision)
 
-Currenlty, this mode only use Resource Timing API to get speeds. Probalbly, this mode works on another media player like Video.js and so on.
+Currenlty, this mode only use Resource Timing API to calculate speed. Probalbly, this mode works on another media player like Video.js and so on.
 
 ## Safari iOS
 
@@ -167,7 +169,7 @@ They do not support transferSize on Resource Timing API. We can not get file siz
 
 I plan to implement a new feasure to get the file size using the internal code of hls.js without filesize.js
 
-#Sample media files
+# Sample media files
 
 - cb.zip
   - based on https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/SMPTE_Color_Bars_16x9.svg/1920px-SMPTE_Color_Bars_16x9.svg.png
