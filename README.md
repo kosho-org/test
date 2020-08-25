@@ -14,7 +14,7 @@ This is a plug-in for hls.js to compare speeds of IPv4 and IPv6 session and choo
 
   <script>
     var video = document.getElementById('video');
-    var videoSrc = 'tears-2m-2-mixed.m3u8';
+    var videoSrc = 'tears-2m-2.m3u8';
   
     var customLoader = function() {};
     customLoader.prototype = new Hls.DefaultConfig.loader();
@@ -26,14 +26,8 @@ This is a plug-in for hls.js to compare speeds of IPv4 and IPv6 session and choo
     var hls = new Hls({loader: customLoader});
     hls.loadSource(videoSrc);
     hls.attachMedia(video);
-    
-    var track = video.addTextTrack("captions","test","en");
-    track.mode = "showing";
 
-    if (window.VTTCue) {
-      cue = new VTTCue(0,999,"Please play video, you will see download speeds");
-      track.addCue(cue);
-    }
+    hls46TextShow();
   </script>
 </html>
 
@@ -41,16 +35,20 @@ This is a plug-in for hls.js to compare speeds of IPv4 and IPv6 session and choo
 
 ## Mode
 
+- mode 0 (simple speed comparision)
+- mode 1 (speed comparision)
+- mode 2 (initital check)
+- mode 3 (continous check)
 
 # Install
 
 ## Files
 ### Client
 - hls-46.js
- - main plug-in
+  - main plug-in
 - hls-customload.js
- - own customLoadInternal(media download handler) for hls.js. 
-### Server (some codes for reporting)
+  - own customLoadInternal(media download handler) for hls.js. 
+### Server (codes for reporting)
 - beacon.php
   - get JSON and write it to log
 - ip.php
